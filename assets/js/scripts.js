@@ -114,13 +114,19 @@ function handleActiveMenu() {
             if (!items.length) return;
 
             removeActive(menu);
-            items[0].classList.add(activeClass);
+            if (window.innerWidth > 991) items[0].classList.add(activeClass);
 
             Array.from(items).forEach((item) => {
                 item.onmouseenter = () => {
                     if (window.innerWidth <= 991) return;
                     removeActive(menu);
                     item.classList.add(activeClass);
+                };
+                item.onclick = () => {
+                    if (window.innerWidth > 991) return;
+                    removeActive(menu);
+                    item.classList.add(activeClass);
+                    item.scrollIntoView();
                 };
             });
         });
@@ -140,7 +146,6 @@ function handleActiveMenu() {
  * <button class="js-toggle" toggle-target="#box">Click</button>
  * <div id="box">Content show/hide</div>
  */
-
 window.addEventListener("template-loaded", initJsToggle);
 
 function initJsToggle() {
@@ -162,3 +167,4 @@ function initJsToggle() {
         };
     });
 }
+
