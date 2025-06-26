@@ -1,0 +1,128 @@
+@use "../abstracts";
+
+.footer {
+    margin-top: 50px;
+    background: var(--header-bg-color);
+
+    &__inner {
+        // display: flex;
+        padding: 50px 0 20px 0;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+        gap: 85px;
+
+        @include abstracts.screen(xl) {
+            display: block;
+        }
+    }
+
+    &__col {
+        @include abstracts.screen(xl) {
+            margin-top: 30px;
+        }
+    }
+
+    &__logo {
+        @include abstracts.screen(xl) {
+            margin-left: 0 !important;
+        }
+    }
+
+    &__title {
+        margin-top: 20px;
+        font-size: 1.6rem;
+        font-weight: 450;
+        line-height: 141.667%;
+        text-align: justify;
+
+        @include abstracts.screen(lg) {
+            // width: 200px;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    &__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #9E9DA8;
+        border-radius: 5px;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &__social-icon {
+        width: 25px;
+        height: 25px;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 10px;
+
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 141.667%;
+    }
+
+    &__label {
+        margin-top: 15px;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 5px 0;
+
+        font-size: 1.6rem;
+        line-height: 150%;
+
+        &:hover {
+            font-weight: 500;
+            color: #0071DC;
+            opacity: 0.8;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        margin-top: 80px;
+
+        @include abstracts.screen(lg) {
+            margin-top: 30px;
+        }
+    }
+
+    &__separate {
+        width: 100%;
+        height: 3px;
+        border-radius: 99px;
+
+        background: var(--footer-separate-bg);
+    }
+
+    &__reserved {
+        margin-top: 20px;
+
+        font-size: 1.6rem;
+        line-height: 150%;
+    }
+}
