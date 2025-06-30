@@ -38,7 +38,7 @@
         height: 50px;
         padding: 0 12px;
         border-radius: 10px;
-        border: 2px solid #D2D1D6;
+        border: 2px solid var(--form-text-input-color);
 
         &:focus-within {
             border-color: #77DAE6;
@@ -59,7 +59,7 @@
         line-height: 144.444%;
 
         &::placeholder {
-            color: #D2D1D6;
+            color: var(--form-placeholder-color);
         }
 
         @include abstracts.screen(md) {
