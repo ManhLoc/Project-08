@@ -2596,10 +2596,23 @@ html {
   width: 15px;
   height: 7px;
   left: 2px;
-  top: 5px;
+  top: 4px;
   border: 2px solid;
   border-color: transparent transparent white white;
   rotate: -45deg;
+}
+
+.message {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+.message--success {
+  border: 2px solid #46a05c;
+  background: rgba(39, 243, 117, 0.2);
 }
 
 .home__container {
@@ -2666,6 +2679,7 @@ html {
   top: 80px;
 }
 .auth__intro-img {
+  width: var(--width);
   max-width: 100%;
 }
 .auth__intro-text {
@@ -2736,9 +2750,15 @@ html {
     line-height: 142.857%;
   }
 }
+.auth__message {
+  margin-top: 30px;
+}
 .auth__form {
   width: 100%;
   margin-top: 30px;
+}
+.auth__form-forgot {
+  margin-top: 10px;
 }
 @media (max-width: 767.98px) {
   .auth__form {
