@@ -1399,7 +1399,7 @@ html {
   --form-text-input-color: #D2D1D6;
   --form-placeholder-color: #D2D1D6;
   --product-detail-bg: #FFF;
-  --product-info-bg: #F6F6F6;
+  --product-detail-info-bg: #F6F6F6;
   --breadcrumbs-bg: #F6F6F6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.20);
 }
@@ -1417,6 +1417,17 @@ html {
 @media (max-width: 767.98px) {
   html {
     --auth-intro-bg: #FFF;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --product-detail-bg: #FAFAFD;
+    --product-detail-info-bg: #FFF;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --breadcrumbs-bg: #FFF;
   }
 }
 
@@ -1685,7 +1696,6 @@ html {
 }
 
 .footer {
-  margin-top: 50px;
   background: var(--header-bg-color);
 }
 .footer__inner {
@@ -2639,6 +2649,7 @@ html {
 @media (max-width: 767.98px) {
   .breadcrumbs {
     gap: 16px;
+    border-radius: 20px;
   }
 }
 .breadcrumbs__link {
@@ -2660,6 +2671,9 @@ html {
   color: inherit;
 }
 
+.home {
+  margin-bottom: 50px;
+}
 .home__container {
   margin-top: 40px;
 }
@@ -2857,11 +2871,17 @@ html {
 .product-page {
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px;
   background: var(--product-detail-bg);
 }
 
 .product-container {
   margin-top: 30px;
+}
+
+.product-info-content {
+  border-radius: 20px;
+  background: #FFF;
 }
 
 .product-preview {
@@ -2871,6 +2891,11 @@ html {
   .product-preview {
     display: flex;
     flex-direction: row-reverse;
+  }
+}
+@media (max-width: 767.98px) {
+  .product-preview {
+    padding: 16px;
   }
 }
 .product-preview__list {
@@ -2936,7 +2961,7 @@ html {
 
 .product-info {
   padding: 60px;
-  background: var(--product-info-bg);
+  background: var(--product-detail-info-bg);
 }
 @media (max-width: 1399.98px) {
   .product-info {
@@ -2946,6 +2971,13 @@ html {
 @media (max-width: 991.98px) {
   .product-info {
     margin-top: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .product-info {
+    padding: 0 16px 16px;
+    margin-top: 0;
+    border-radius: 20px;
   }
 }
 .product-info__heading {
@@ -3002,11 +3034,16 @@ html {
 }
 
 .product-props {
-  margin-left: 30px;
+  padding-left: 30px;
 }
 @media (max-width: 1399.98px) {
   .product-props {
-    margin-left: 10px;
+    padding-left: 10px;
+  }
+}
+@media (max-width: 991.98px) {
+  .product-props {
+    padding-left: 0;
   }
 }
 
@@ -3014,6 +3051,11 @@ html {
   display: flex;
   gap: 16px;
   margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .product-prop {
+    margin-top: 20px;
+  }
 }
 .product-prop__icon {
   align-self: flex-start;

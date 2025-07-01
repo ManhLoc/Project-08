@@ -4,11 +4,18 @@
     display: flex;
     flex-direction: column;
 
+    padding-bottom: 50px;
+
     background: var(--product-detail-bg);
 }
 
 .product-container {
     margin-top: 30px;
+}
+
+.product-info-content {
+    border-radius: 20px;
+    background: #FFF;
 }
 
 .product-preview {
@@ -17,6 +24,10 @@
     @include abstracts.screen(lg) {
         display: flex;
         flex-direction: row-reverse;
+    }
+
+    @include abstracts.screen(md) {
+        padding: 16px;
     }
 
     &__list {
@@ -91,7 +102,7 @@
 
 .product-info {
     padding: 60px;
-    background: var(--product-info-bg);
+    background: var(--product-detail-info-bg);
 
     @include abstracts.screen(xxl) {
         padding: 40px;
@@ -99,6 +110,12 @@
 
     @include abstracts.screen(lg) {
         margin-top: 30px;
+    }
+
+    @include abstracts.screen(md) {
+        padding: 0 16px 16px;
+        margin-top: 0;
+        border-radius: 20px;
     }
 
     &__heading {
@@ -169,10 +186,14 @@
 }
 
 .product-props {
-    margin-left: 30px;
+    padding-left: 30px;
 
     @include abstracts.screen(xxl) {
-        margin-left: 10px;
+        padding-left: 10px;
+    }
+
+    @include abstracts.screen(lg) {
+        padding-left: 0;
     }
 }
 
@@ -181,6 +202,10 @@
     gap: 16px;
 
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
 
     &__icon {
         align-self: flex-start;
