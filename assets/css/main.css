@@ -1378,6 +1378,7 @@ html.dark {
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.20);
   --search-bar-bg:#171C28;
   --review-card-bg: #171C28;
+  --text-content-hr-bg: #abb1be;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1437,6 +1438,7 @@ html {
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.20);
   --search-bar-bg: #FFF;
   --review-card-bg: #FAFAFD;
+  --text-content-hr-bg: #FAFAFD;
 }
 @media (max-width: 991.98px) {
   html {
@@ -2766,6 +2768,7 @@ html {
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 .review-card__title {
   font-size: 2.2rem;
@@ -2876,7 +2879,7 @@ html {
   border: none;
   height: 1px;
   margin: 50px 0;
-  background: rgba(12, 12, 12, 0.1176470588);
+  background: var(--text-content-hr-bg);
 }
 
 .home {
@@ -3320,6 +3323,9 @@ html {
 }
 .product-tab__content--current {
   display: block;
+}
+.product-tab__text-content {
+  margin-top: -20px;
 }
 
 .product-content__heading {
