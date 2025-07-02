@@ -79,4 +79,8 @@ html.dark {
 
     // Review card
     --review-card-bg: #171C28;
+
+    @include abstracts.screen(md) {
+        --review-card-bg: #171C28;
+    }
 }

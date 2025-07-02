@@ -4,6 +4,7 @@
 ::before,
 ::after {
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -42,7 +43,6 @@ select {
     color: inherit;
     outline: none;
     border: none;
-    -webkit-tap-highlight-color: transparent;
 }
 
 input {
