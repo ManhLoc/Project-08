@@ -1382,6 +1382,11 @@ html.dark {
   --search-bar-bg:#171C28;
   --review-card-bg: #171C28;
   --text-content-hr-bg: #abb1be;
+  --checkout-breadcrumbs-bg: #171C28;
+  --checkout-cart-info-bg: #171C28;
+  --checkout-cart-info-shadow: rgba(23, 28, 40, 0.20);
+  --checkout-border-color: #292E39;
+  --checkout-gift-shadow: rgba(23, 28, 40, 0.20);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1445,6 +1450,11 @@ html {
   --search-bar-bg: #FFF;
   --review-card-bg: #FAFAFD;
   --text-content-hr-bg: #FAFAFD;
+  --checkout-breadcrumbs-bg: #FFF;
+  --checkout-cart-info-bg: #FFF;
+  --checkout-cart-info-shadow: rgba(237, 237, 246, 0.20);
+  --checkout-border-color: #D2D1D6;
+  --checkout-gift-shadow: rgba(237, 237, 246, 0.20);
 }
 @media (max-width: 991.98px) {
   html {
@@ -3462,7 +3472,7 @@ html {
   padding-bottom: 50px;
 }
 .checkout-page__breadcrumbs {
-  background: #FFF;
+  background: var(--checkout-breadcrumbs-bg);
 }
 
 .checkout-container {
@@ -3477,8 +3487,8 @@ html {
 .cart-info {
   padding: 30px;
   border-radius: 20px;
-  background: #FFF;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--checkout-cart-info-bg);
+  box-shadow: 0px 20px 60px 10px var(--checkout-cart-info-shadow);
 }
 @media (max-width: 767.98px) {
   .cart-info {
@@ -3531,7 +3541,7 @@ html {
 .cart-info__separate {
   height: 1px;
   margin: 30px 0;
-  background: #D2D1D6;
+  background: var(--checkout-border-color);
 }
 .cart-info + .cart-info {
   margin-top: 30px;
@@ -3546,11 +3556,12 @@ html {
 .cart-item {
   display: flex;
   padding: 30px 0;
-  border-bottom: 1px solid #D2D1D6;
+  border-bottom: 1px solid var(--checkout-border-color);
 }
 @media (max-width: 767.98px) {
   .cart-item {
     padding: 16px 0;
+    gap: 16px;
   }
   .cart-item:last-child {
     border: none;
@@ -3662,6 +3673,7 @@ html {
 }
 @media (max-width: 767.98px) {
   .cart-item__total-price {
+    margin-bottom: 16px;
     text-align: left;
   }
 }
@@ -3679,7 +3691,7 @@ html {
   height: 76px;
   border-radius: 14px;
   background: rgba(118, 68, 225, 0.1647058824);
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  box-shadow: 0px 20px 60px 10px var(--checkout-gift-shadow);
 }
 .gift-item__title {
   font-size: 1.8rem;
