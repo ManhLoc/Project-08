@@ -58,7 +58,7 @@
 
     font-size: 1.8rem;
     font-weight: 500;
-
+    white-space: nowrap;
     user-select: none;
 
     +.btn {
@@ -69,7 +69,6 @@
 
     &--text {
         background: transparent;
-        color: #9E9DA8;
         font-weight: 400;
     }
 
@@ -85,6 +84,11 @@
 
     &--rounded {
         border-radius: 99px;
+    }
+
+    &--small {
+        height: 40px;
+        padding: 0 16px;
     }
 
     &[disabled],

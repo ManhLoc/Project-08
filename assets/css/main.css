@@ -1387,6 +1387,8 @@ html.dark {
   --checkout-cart-info-shadow: rgba(23, 28, 40, 0.20);
   --checkout-border-color: #292E39;
   --checkout-gift-shadow: rgba(23, 28, 40, 0.20);
+  --dialog-bg: #171C28;
+  --dialog-shadow: rgba(23, 28, 40, 0.20);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1455,6 +1457,8 @@ html {
   --checkout-cart-info-shadow: rgba(237, 237, 246, 0.20);
   --checkout-border-color: #D2D1D6;
   --checkout-gift-shadow: rgba(237, 237, 246, 0.20);
+  --dialog-bg: #FFF;
+  --dialog-shadow: rgba(237, 237, 246, 0.20);
 }
 @media (max-width: 991.98px) {
   html {
@@ -2351,6 +2355,7 @@ html {
   background: #F8F8FB;
   font-size: 1.8rem;
   font-weight: 500;
+  white-space: nowrap;
   user-select: none;
 }
 .btn + .btn:not(.btn--no-margin) {
@@ -2358,7 +2363,6 @@ html {
 }
 .btn--text {
   background: transparent;
-  color: #9E9DA8;
   font-weight: 400;
 }
 .btn--primary {
@@ -2371,6 +2375,10 @@ html {
 }
 .btn--rounded {
   border-radius: 99px;
+}
+.btn--small {
+  height: 40px;
+  padding: 0 16px;
 }
 .btn[disabled], .btn--disabled {
   opacity: 0.5;
@@ -3011,6 +3019,65 @@ html {
   height: 1px;
   margin: 50px 0;
   background: var(--text-content-hr-bg);
+}
+
+.dialog__overlay, .dialog {
+  position: fixed;
+  inset: 0;
+}
+
+.dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity, visibility;
+  transition-duration: 0.2s;
+  z-index: 99;
+}
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 767.98px) {
+  .dialog {
+    padding: 20px;
+  }
+}
+.dialog__overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+.dialog__content {
+  position: relative;
+  z-index: 1;
+  max-width: min(450px, 100% - 40px);
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--dialog-bg);
+  box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
+}
+.dialog__text {
+  font-size: 1.8rem;
+  line-height: 150%;
+}
+.dialog__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .dialog__bottom {
+    gap: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .dialog__btn {
+    flex: 1;
+  }
 }
 
 .home {
