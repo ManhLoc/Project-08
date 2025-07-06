@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -77,16 +77,31 @@
                                             <h2 class="user-address__title">Shipping address</h2>
                                             <p class="user-address__desc">Where should we deliver your order?</p>
                                         </div>
-                                        <button class="user-address__btn btn btn--primary btn--rounded">
-                                            <img src="./assets/icons/plus.svg" alt="" class="user-address__icon icon" />
+                                        <button class="user-address__btn btn btn--primary btn--rounded btn--small">
+                                            <img src="./assets/icons/plus.svg" alt="" class="user-address__icon" />
                                             Add a new address
                                         </button>
                                     </div>
                                     <div class="user-address__list">
+                                        <!-- Empty message -->
+                                        <!-- <p class="user-address__message">
+                                            Not address yet.
+                                            <a href="#!" class="user-address__link"> Add a new address</a>
+                                        </p> -->
+
                                         <!-- Address card 1 -->
                                         <article class="address-card">
                                             <div class="address-card__left">
-                                                <div class="address-card__choose"></div>
+                                                <div class="address-card__choose">
+                                                    <label class="address-card__checkbox">
+                                                        <input
+                                                            type="checkbox"
+                                                            name=""
+                                                            class="address-card__checkbox-input"
+                                                            checked
+                                                        />
+                                                    </label>
+                                                </div>
                                                 <div class="address-card__info">
                                                     <h3 class="address-card__title">Imran Khan</h3>
                                                     <p class="address-card__desc">
@@ -115,7 +130,15 @@
                                         <!-- Address card 2 -->
                                         <article class="address-card">
                                             <div class="address-card__left">
-                                                <div class="address-card__choose"></div>
+                                                <div class="address-card__choose">
+                                                    <label class="address-card__checkbox">
+                                                        <input
+                                                            type="checkbox"
+                                                            name=""
+                                                            class="address-card__checkbox-input"
+                                                        />
+                                                    </label>
+                                                </div>
                                                 <div class="address-card__info">
                                                     <h3 class="address-card__title">Imran Khan</h3>
                                                     <p class="address-card__desc">
@@ -143,6 +166,8 @@
                                         </article>
                                     </div>
                                 </div>
+
+                                <div class="cart-info__separate"></div>
 
                                 <h2 class="cart-info__sub-heading">Items details</h2>
 
