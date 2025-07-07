@@ -6,6 +6,16 @@
         pointer-events: none;
     }
 
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        >* {
+            flex: 1;
+        }
+    }
+
     &__group {
         margin-top: 30px;
 
@@ -31,11 +41,11 @@
         }
     }
 
+    &__text-area,
     &__text-input {
         display: flex;
         align-items: center;
 
-        height: 50px;
         padding: 0 12px;
         border-radius: 10px;
         border: 2px solid var(--form-text-input-color);
@@ -44,14 +54,36 @@
             border-color: #77DAE6;
         }
 
-        @include abstracts.screen(md) {
-            height: 48px;
+        &--small {
+            border-radius: 8px;
         }
     }
 
+    &__text-area {
+        height: 100px;
+        padding: 12px;
+
+        &-input {
+            width: 100%;
+            resize: none;
+        }
+    }
+
+    &__text-input {
+        height: 50px;
+
+        @include abstracts.screen(md) {
+            height: 48px;
+        }
+
+        &--small {
+            height: 42px;
+        }
+    }
+
+    &__text-area-input,
     &__input {
         flex: 1;
-
         height: 100%;
 
         font-size: 1.8rem;
@@ -65,7 +97,9 @@
         @include abstracts.screen(md) {
             font-size: 1.6rem;
         }
+    }
 
+    &__input {
         &-icon {
             margin-left: 12px;
 
