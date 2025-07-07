@@ -1383,6 +1383,9 @@ html.dark {
   --auth-heading-color: #B9BABE;
   --form-text-input-color: #B9BABE;
   --form-placeholder-color: #B9BABE;
+  --form-select-dialog-shadow: rgba($color: #FFF, $alpha: 0.2);
+  --form-select-dialog-bg: #2F3441;
+  --form-options-hover-bg:#292E39;
   --product-detail-bg: #292E39;
   --product-detail-info-content-bg: #292E39;
   --product-detail-info-bg: #171C28;
@@ -1453,6 +1456,9 @@ html {
   --auth-content-bg: #FFF;
   --form-text-input-color: #D2D1D6;
   --form-placeholder-color: #D2D1D6;
+  --form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.2);
+  --form-select-dialog-bg: #FFF;
+  --form-options-hover-bg: #ededed;
   --product-detail-bg: #FFF;
   --product-detail-info-content-bg: #FFF;
   --product-detail-info-bg: #F6F6F6;
@@ -2851,15 +2857,26 @@ html {
   max-height: 310px;
   bottom: 44px;
   left: 10px;
-  padding: 10px 0;
+  padding-bottom: 10px;
   border: 2px solid #D2D1D6;
   border-radius: 10px;
-  background: #FFF;
+  box-shadow: 0 0 5px var(--form-select-dialog-shadow);
+  background: var(--form-select-dialog-bg);
   opacity: 0;
   visibility: hidden;
   translate: 0 15px;
   transition: opacity, visibility, translate;
   transition-duration: 0.2s;
+  z-index: 1;
+}
+@media (max-width: 767.98px) {
+  .form__select-dialog {
+    position: fixed;
+    max-width: initial;
+    max-height: initial;
+    inset: 0;
+    border-radius: 0;
+  }
 }
 .form__select-dialog.show {
   opacity: 1;
@@ -2869,19 +2886,42 @@ html {
 .form__search {
   display: flex;
   align-items: center;
-  padding: 0 20px 10px;
+  flex-shrink: 0;
+  height: 38px;
+  padding: 0 20px;
   border-bottom: 1px solid #D2D1D6;
+}
+@media (max-width: 991.98px) {
+  .form__search {
+    height: 42px;
+  }
+}
+@media (max-width: 575.98px) {
+  .form__search {
+    flex-direction: row-reverse;
+    margin-top: 40px;
+  }
 }
 .form__search-input {
   flex: 1;
+  height: 100%;
+  font-size: 1.6rem;
 }
 .form__search-icon {
   width: 18px;
+  margin-left: 12px;
+}
+@media (max-width: 575.98px) {
+  .form__search-icon {
+    margin-left: 0;
+    margin-right: 12px;
+  }
 }
 .form__options-list {
   flex: 1;
   margin-top: 10px;
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .form__options {
   padding: 8px 20px;
@@ -2889,11 +2929,24 @@ html {
 }
 .form__options:not(.form__options--current):hover {
   cursor: pointer;
-  background-color: #ededed;
+  background-color: var(--form-options-hover-bg);
+}
+@media (max-width: 991.98px) {
+  .form__options {
+    padding: 14px 20px;
+  }
 }
 .form__options--current {
   font-weight: 500;
-  background-color: rgba(255, 183, 0, 0.5019607843);
+  background-color: rgba(255, 183, 0, 0.6196078431);
+}
+.form__close-dialog {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  padding: 2px 20px;
+  font-size: 4rem;
+  opacity: 0.7;
 }
 
 .message {
