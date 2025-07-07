@@ -321,16 +321,16 @@
         </script>
 
         <!-- Dialog / Modal -->
-        <div id="delete-confirm" class="dialog hide">
+        <div id="delete-confirm" class="dialog dialog--small hide">
             <div class="dialog__content">
-                <div class="dialog__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quam.</div>
+                <p class="dialog__text">Are you sure you want to delete?</p>
                 <div class="dialog__bottom">
-                    <button toggle-target="#delete-confirm" class="js-toggle btn btn--text btn--small dialog__btn">
+                    <button toggle-target="#delete-confirm" class="js-toggle btn btn--outline btn--small dialog__btn">
                         Cancel
                     </button>
                     <button
                         toggle-target="#delete-confirm"
-                        class="js-toggle btn btn--primary btn--small btn--no-margin dialog__btn"
+                        class="js-toggle btn btn--danger btn--primary btn--small btn--no-margin dialog__btn"
                     >
                         Confirm
                     </button>

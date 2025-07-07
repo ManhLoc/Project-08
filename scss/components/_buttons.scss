@@ -90,6 +90,11 @@
         height: 40px;
     }
 
+    &--danger {
+        color: #FFF;
+        background: #ed4337;
+    }
+
     &[disabled],
     &--disabled {
         opacity: 0.5;

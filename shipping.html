@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -442,14 +442,14 @@
         <!-- Dialog / Modal -->
         <div id="delete-confirm" class="dialog dialog--small hide">
             <div class="dialog__content">
-                <div class="dialog__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quam.</div>
+                <p class="dialog__text">Are you sure you want to delete?</p>
                 <div class="dialog__bottom">
-                    <button toggle-target="#delete-confirm" class="js-toggle btn btn--text btn--small dialog__btn">
+                    <button toggle-target="#delete-confirm" class="js-toggle btn btn--outline btn--small dialog__btn">
                         Cancel
                     </button>
                     <button
                         toggle-target="#delete-confirm"
-                        class="js-toggle btn btn--primary btn--small btn--no-margin dialog__btn"
+                        class="js-toggle btn btn--danger btn--primary btn--small btn--no-margin dialog__btn"
                     >
                         Confirm
                     </button>
@@ -459,7 +459,7 @@
         </div>
 
         <!-- Dialog / Modal -->
-        <div id="add-new-address" class="dialog show" style="--content-width: 650px">
+        <div id="add-new-address" class="dialog hide" style="--content-width: 650px">
             <div class="dialog__content">
                 <form action="" class="form">
                     <h2 class="dialog__heading">Add new shipping address</h2>
@@ -521,10 +521,12 @@
                                     placeholder="City"
                                     class="form__input js-toggle"
                                     toggle-target="#city-dialog"
+                                    readonly
                                 />
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
 
                                 <div id="city-dialog" class="form__select-dialog hide">
+                                    <h2 class="form__dialog-heading d-none d-sm-block">City</h2>
                                     <button
                                         class="form__close-dialog d-none d-sm-block js-toggle"
                                         toggle-target="#city-dialog"
