@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -461,9 +461,9 @@
         <!-- Dialog / Modal -->
         <div id="add-new-address" class="dialog show" style="--content-width: 650px">
             <div class="dialog__content">
-                <h2 class="dialog__heading">Add new shopping address</h2>
-                <div class="dialog__body">
-                    <form action="" class="form">
+                <form action="" class="form">
+                    <h2 class="dialog__heading">Add new shipping address</h2>
+                    <div class="dialog__body">
                         <div class="form__row">
                             <div class="form__group">
                                 <label for="name" class="form__label form__label--small">Name</label>
@@ -525,19 +525,19 @@
                                 <span class="form__checkbox-label">Set as default address</span>
                             </label>
                         </div>
-                    </form>
-                </div>
-                <div class="dialog__bottom">
-                    <button toggle-target="#add-new-address" class="js-toggle btn btn--text btn--small dialog__btn">
-                        Cancel
-                    </button>
-                    <button
-                        toggle-target="#add-new-address"
-                        class="js-toggle btn btn--primary btn--small btn--no-margin dialog__btn"
-                    >
-                        Create
-                    </button>
-                </div>
+                    </div>
+                    <div class="dialog__bottom">
+                        <button toggle-target="#add-new-address" class="js-toggle btn btn--text btn--small dialog__btn">
+                            Cancel
+                        </button>
+                        <button
+                            toggle-target="#add-new-address"
+                            class="js-toggle btn btn--primary btn--small btn--no-margin dialog__btn"
+                        >
+                            Create
+                        </button>
+                    </div>
+                </form>
             </div>
             <div class="dialog__overlay"></div>
         </div>

@@ -8,8 +8,16 @@
 
     &__row {
         display: flex;
-        align-items: center;
         gap: 30px;
+
+        @include abstracts.screen(md) {
+            gap: 20px;
+        }
+
+        @include abstracts.screen(sm) {
+            gap: 0;
+            flex-direction: column;
+        }
 
         >* {
             flex: 1;
@@ -64,7 +72,6 @@
         padding: 12px;
 
         &-input {
-            width: 100%;
             resize: none;
         }
     }
@@ -85,6 +92,7 @@
     &__input {
         flex: 1;
         height: 100%;
+        width: 100%;
 
         font-size: 1.8rem;
         font-weight: 500;
