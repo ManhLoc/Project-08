@@ -79,3 +79,10 @@ b,
 strong {
     font-weight: 600;
 }
+
+.separate {
+    width: 100%;
+    height: 1px;
+    margin: var(--margin) 0;
+    background: #D2D1D6;
+}
